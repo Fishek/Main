@@ -1,0 +1,23 @@
+Function EndPrice(Quantity, Value)
+If Quantity < 2 Then
+EndPrice = Quantity * Value
+Else
+EndPrice = 8
+
+End If
+
+End Function
+
+//Clearning Content
+Sub ClearContent()
+
+ Dim wiersz As Long
+    wiersz = 20
+
+Range("6:" & wiersz).ClearContents //use Clear if you want to remove everything
+//or
+Rows("A:A,B:B").ClearContents
+Columns("A:A,B:B").ClearContents
+Range("A1:B5").Clear
+
+End Sub
