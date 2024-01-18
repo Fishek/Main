@@ -20,4 +20,83 @@ Rows("A:A,B:B").ClearContents
 Columns("A:A,B:B").ClearContents
 Range("A1:B5").Clear
 
+//ClearContents With Button
+Sub ClearContent()
+
+messageBox = MsgBox("Czy Na Pewno chcesz usunac?", vbYesNo)
+If messageBox = vbYes Then
+Range("E5:H16").ClearContents
+Else
+Exit Sub
+End If
+
 End Sub
+
+//Sending Email
+Sub SendEmail()
+
+Dim OutApp As Object
+Dim OutMail As Object
+
+Set OutApp = CreateObject("Outlook.Application")
+Set OutMail = OutApp.CreateItem(0)
+
+With OutMail
+.To = "kinga.kula@underscoremarketing.com; izabela.hanus@underscoremarketing.com"
+.Subject = "Subject"
+.Body = "Hej Kinga"
+.Attachments.Add ThisWorkbook.FullName
+.Display
+End With
+
+Set OutApp = Nothing
+Set OutMail = Nothing
+
+End Sub
+
+
+
+
+//TS Automation
+
+Function Copy_Data()
+
+placement_number = InputBox("How many placements will be needed?")
+placement_number = placement_number + 20
+
+Range("20:20").Copy Range("21:" & placement_number)
+
+partner_number = InputBox("How many partners will be needed?")
+
+Dim i
+For i = 0 To partner_number
+
+
+partner_name
+
+
+
+
+
+
+
+' brand_name = InputBox("What's the brand name?")
+
+' Range("B21:B" & placement_number - 1).Value = "no shej"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
