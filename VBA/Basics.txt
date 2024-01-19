@@ -60,30 +60,52 @@ End Sub
 //TS Automation
 
 Function Copy_Data()
+    Dim placement_number As Integer
+    Dim partner_number As Integer
+    Dim partnerNames() As Variant ' Array to store partner names
+    Dim programData() As Variant  ' Array to store program data
+    Dim programSizes() As Variant ' Array to store the number of sizes for each program
 
-placement_number = InputBox("How many placements will be needed?")
-placement_number = placement_number + 20
+    placement_number = InputBox("How many placements will be needed?")
+    placement_number = placement_number + 20
 
-Range("20:20").Copy Range("21:" & placement_number)
+    Range("20:20").Copy Range("21:" & placement_number)
 
-partner_number = InputBox("How many partners will be needed?")
+    partner_number = InputBox("How many partners will be needed?")
+    
+    If partner_number > 0 Then
+        ReDim partnerNames(1 To partner_number) ' Resize the partnerNames array
+        ReDim programData(1 To partner_number, 1 To 3) ' Resize the programData array
+        ReDim programSizes(1 To partner_number, 1 To 3) ' Resize the programSizes array
+        
+        Dim i As Integer
+        For i = 1 To partner_number
+            partnerNames(i) = InputBox("Enter Partner Name for Partner " & i & ":")
+            
+            Dim numPrograms As Integer
+            numPrograms = InputBox("Enter the number of programs for Partner " & partnerNames(i) & ":")
+            
+            Dim j As Integer
+            For j = 1 To numPrograms
+                programData(i, 1) = InputBox("Enter Program Name " & j & " for Partner " & partnerNames(i) & ":")
+                
+                Dim numSizes As Integer
+                numSizes = InputBox("Enter the number of banner sizes for Program " & programData(i, 1) & ":")
+                
+                programSizes(i, j) = numSizes ' Store the number of sizes for this program
+            Next j
+        Next i
 
-Dim i
-For i = 0 To partner_number
-
-
-partner_name
-
-
-
-
-
-
-
-' brand_name = InputBox("What's the brand name?")
-
-' Range("B21:B" & placement_number - 1).Value = "no shej"
-
+        ' Now, you have arrays partnerNames, programData, and programSizes.
+        ' partnerNames holds the partner names, programData holds program details, and programSizes holds the number of banner sizes for each program.
+        ' You can access them using partnerNames(1), partnerNames(2), etc., and programData(1, 1), programData(1, 2), etc.
+    Else
+        MsgBox "No partners were specified. Exiting."
+    End If
+    
+    Range("20:20").Copy Range("21:" & placement_number)
+    
+End Function
 
 
 
