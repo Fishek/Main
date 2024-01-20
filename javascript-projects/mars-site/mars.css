@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+section {
+  background-color: rgb(252, 172, 135);
+
+  background-image: url("marsphoto.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  background-blend-mode: multiply;
+  padding: 50px;
+  
+  
+}
+
+body {
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mars {
+ 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+  
+}
+
+h1 {
+
+  color: white;
+  font-weight: 600;
+  font-size: 200px;
+  letter-spacing: 70px;
+  text-shadow: 2px 2px #ffa600;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  text-indent: 70px;
+  
+}
+
+.logo {
+  font-size: 60px;
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+}
+
+.xplore
+{
+  font-size: 20px;
+  margin-left: 10px;
+  font-weight: 200;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  list-style: none;
+  padding-right: 80px;
+}
+
+
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 100;
+  letter-spacing: 7px;
+}
+.bar1 {
+  position: absolute;
+  width: 1020px;
+  background-color: white;
+  height: 0.7px;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  
+}
+/* 
+}
+
+.bar2 {
+  top: 61%;
+  width: 1040px;
+}
+
+.bar3 {
+  top: 62%;
+  width: 1060px;
+}
+.bar4 {
+  top: 63%;
+  width: 1080px;
+} */
+
+.pMars{
+  margin-top: 30px;
+  position: absolute;
+  color: white;
+  width: 800px;
+  left: 50%;
+  top: 65%;
+  transform: translate(-50%, -50%);
+  font-weight: 200;
+  font-size: 20px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.parameters
+{
+  position: relative;
+  top: 85%;
+  display: flex;
+  justify-content: space-around;
+  
+
+}
+.parameters div{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+h2{
+
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.pParameters
+{
+  display: flex;
+  justify-content: center;
+  font-weight: 200;
+  font-size: 40px;
+}
+
