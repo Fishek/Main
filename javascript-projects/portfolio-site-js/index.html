@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jakub Obalek Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo"><img src="images/Untitled-1.png" /></div>
+      <div class="nav-links">
+        <ul>
+          <li><a href="#" class="nav1">Home</a></li>
+          <li><a href="#" class="nav2">About</a></li>
+          <li><a href="#" class="nav3">Portfolio</a></li>
+         
+        </ul>
+      </div>
+      <div class="contactBtn">Contact</div>
+    </header>
+
+    <section>
+      <div class="sidebar">
+        <div class="slideshow-container">
+
+          <!-- slide 1 -->
+          <div class="slide slide1">
+            <div class="introduction">
+              <h1 class="introh1">Hi,</h1>
+              <h1 class="introh1">I'm Jakub,</h1>
+              <h1 class="introh1">Web Developer</h1>
+              <h2 class="introh2">Front End Developer / Graphic Designer</h2>
+            </div>
+
+            <div class="social-media">
+              <div class="facebook"><a href="https://www.facebook.com/kuba.obalek" ><i class="fa-brands fa-facebook-f"></i></a></div>
+              <div class="linkedIn"><a href="" ><i class="fa-brands fa-linkedin-in"></i></a></div>
+              <div class="github"><a href="" ><i class="fa-brands fa-github"></i></a></div>
+            </div>
+          </div>
+
+          <!-- slide 2 -->
+
+          <div class="slide slide2">
+            <div class="box-container">
+              <div class="box box1"><img src="images/moje3.png" alt="" /></div>
+              <div class="box box2">
+                <div class="aboutme">About Me</div>
+                <div class="headline">
+                  <div class="devel">Developer</div>
+                  <div class="design">&nbsp;& Designer</div>
+                </div>
+                <hr />
+
+                <p>
+                  My name is Jakub Obalek. I'm a Freelance Frontend Developer
+                  based in Kraków, Poland, and I'm very passionate and dedicated
+                  to my work. During my learning path, I acquired the skills
+                  necessary to build great and premium websites. Lorem ipsum
+                  dolor sit amet consectetur adipisicing elit. Ad distinctio
+                  inventore, quia voluptates nostrum, consequatur ducimus
+                  perspiciatis obcaecati ut molestias quisquam nesciunt
+                  temporibus. Voluptatem amet, quae enim fugiat ex minus!
+                </p>
+
+                <button class="hire-me"><a href="images/CV.pdf" class="hire-meA" download="Jakub_Obalek_CV">Hire me</a></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- slide 3 -->
+
+          <div class="slide slide3">
+            <div class="box-container3">
+              <div class="headline3">My Work</div>
+              <hr />
+              <div class="portfolio">
+                <div class="portfolio-box1">
+                  <div class="textbox textbox1">
+                    <h3 class="textbox-title">Weather App</h3>
+                    <p class="textbox-text">
+                      The app that allows you to check your weather from any
+                      part of the globe. Very easily navigated and interactive
+                      in every possible way
+                    </p>
+                    <div class="circle"><i class="fa-regular fa-share-from-square"></i></div>
+                  </div>
+                  <img src="images/portfolio_1.png" class="img1" />
+                </div>
+                <div class="portfolio-box2">
+                  <div class="textbox textbox2">
+                    <h3 class="textbox-title">Fanta Website</h3>
+                    <p class="textbox-text">
+                      The app that allows you to check your weather from any
+                      part of the globe. Very easily navigated and interactive
+                      in every possible way
+                    </p>
+                    <div class="circle"><i class="fa-regular fa-share-from-square"></i></div>
+                  </div>
+                  <img src="images/portfolio_2.png" class="img2" />
+                  
+                </div>
+                <div class="portfolio-box3">
+                  <div class="textbox textbox3">
+                    <h3 class="textbox-title">Mars Website</h3>
+                    <p class="textbox-text">
+                      The app that allows you to check your weather from any
+                      part of the globe. Very easily navigated and interactive
+                      in every possible way
+                    </p>
+                    <div class="circle"><i class="fa-regular fa-share-from-square"></i></div>
+                  </div>
+                  <img src="images/portfolio_3.png" class="img3" />
+                </div>
+              </div>
+              <div class="github-link"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Prev and Next Buttons -->
+
+        <button class="prev" onclick="goPrev()">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <button class="next" onclick="goNext()">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+<!-- Contact Container -->
+      <div class="contact-container">
+        <div class="email-image-container">
+          <div class="email-image"><i class="fa-solid fa-envelope" style="color: #43a4bd;"></i></div>
+        </div>
+        <div class="contact-part">
+          <p class="contactp">Get in touch</p>
+
+          <input type="text" class="input name" value="Name" />
+          <input type="text" class="input email" value="Email" />
+          <input type="text" class="input message" value="Message" />
+          <button class="button-send">Send</button>
+        </div>
+
+        <div class="xBtn"><i class="fa-solid fa-x" style="color: #43a4bd;"></i></div>
+      </div>
+
+
+
+    </section>
+
+    <!-- Script -->
+
+    <script>
+      const slides = document.querySelectorAll(".slide");
+
+      var counter = 0;
+
+      slides.forEach((slide, index) => {
+        /*zamiast slide moze byc cokolwiek innego, to jest parametr*/
+        slide.style.left = `${index * 100}%`;
+      });
+
+      const goNext = () => {
+        if (counter < slides.length - 1) {
+          counter++;
+          slideImage();
+          updateNavStyles();
+        }
+      };
+      const goPrev = () => {
+        if (counter != 0) {
+          console.log(counter);
+          counter--;
+          console.log(counter);
+          slideImage();
+          updateNavStyles();
+        }
+      };
+
+      const slideImage = () => {
+        slides.forEach((slide) => {
+          slide.style.transform = `translateX(-${counter * 100}%)`;
+        });
+      };
+
+      const navHome = document.querySelector(".nav1");
+      const navAbout = document.querySelector(".nav2");
+      const navPortfolio = document.querySelector(".nav3");
+
+      //navigation color adapt
+      if (counter === 0) {
+        navHome.style.background = "rgba(20, 191, 221, 0.726)";
+        navHome.style.borderBottom = "5px solid white";
+      }
+
+      const updateNavStyles = () => {
+        if (counter === 0) {
+          navHome.style.background = "rgba(20, 191, 221, 0.726)";
+          navHome.style.borderBottom = "5px solid white";
+          navAbout.style.background = ""; // Reset other styles
+          navAbout.style.borderBottom = "";
+          navPortfolio.style.background = "";
+          navPortfolio.style.borderBottom = "";
+        } else if (counter === 1) {
+          navAbout.style.background = "rgba(20, 191, 221, 0.726)";
+          navAbout.style.borderBottom = "5px solid white";
+          navHome.style.background = "";
+          navHome.style.borderBottom = "";
+          navPortfolio.style.background = "";
+          navPortfolio.style.borderBottom = "";
+        } else if (counter === 2) {
+          navPortfolio.style.background = "rgba(20, 191, 221, 0.726)";
+          navPortfolio.style.borderBottom = "5px solid white";
+          navHome.style.background = "";
+          navHome.style.borderBottom = "";
+          navAbout.style.background = "";
+          navAbout.style.borderBottom = "";
+        }
+      };
+
+      navHome.addEventListener('click', () => {
+  counter = 0; // Set the counter to the index of the desired slide
+  slideImage();
+  updateNavStyles();
+});
+
+navAbout.addEventListener('click', () => {
+  counter = 1; // Set the counter to the index of the desired slide
+  slideImage();
+  updateNavStyles();
+});
+
+navPortfolio.addEventListener('click', () => {
+  counter = 2; // Set the counter to the index of the desired slide
+  slideImage();
+  updateNavStyles();
+});
+
+
+
+//Contact Window
+
+      var text_Name = document.getElementsByClassName("input name")[0];
+      var default_Value = text_Name.value;
+      text_Name.addEventListener("focus", () => {
+        if (text_Name.value === "Name") {
+          text_Name.value = "";
+        }
+      });
+
+      text_Name.addEventListener("blur", () => {
+        if (text_Name.value === "") {
+          text_Name.value = default_Value;
+        }
+      });
+
+      var email_Name = document.getElementsByClassName("input email")[0];
+      var default_EmailValue = email_Name.value;
+      email_Name.addEventListener("focus", () => {
+        if (email_Name.value === "Email") {
+          email_Name.value = "";
+        }
+      });
+
+      email_Name.addEventListener("blur", () => {
+        if (email_Name.value === "") {
+          email_Name.value = default_EmailValue;
+        }
+      });
+
+      var message_Name = document.getElementsByClassName("input message")[0];
+      var default_messageValue = message_Name.value;
+      message_Name.addEventListener("focus", () => {
+        if (message_Name.value === "Message") {
+          message_Name.value = "";
+        }
+      });
+
+      message_Name.addEventListener("blur", () => {
+        if (message_Name.value === "") {
+          message_Name.value = default_messageValue;
+        }
+      });
+
+      var btn = document.getElementsByClassName("button-send")[0];
+      btn.addEventListener("click", () => {
+        if (email_Name.value != "" && email_Name.value != "Email") {
+          alert("Thank you!");
+        } else {
+          alert("Please, put the email!");
+        }
+      });
+
+      var contactBtn = document.querySelector(".contactBtn");
+      var contactWindow = document.querySelector(".contact-container");
+      contactBtn.addEventListener('click', ()=> {
+        contactWindow.style.opacity = 0;
+        contactWindow.style.display = "flex";
+
+        setTimeout(() => {
+    contactWindow.style.opacity = 1;
+  }, 10);
+      });
+
+      var xBtn = document.querySelector(".xBtn");
+      xBtn.addEventListener('click', ()=> {
+        contactWindow.style.display = "none";
+      });
+
+      
+    </script>
+  </body>
+</html>
