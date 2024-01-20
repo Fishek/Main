@@ -1,0 +1,340 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/******** Main ********/
+
+section
+{
+    display: flex;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 60px;
+    justify-content: space-between;
+    align-items: center;
+    background-color:white ;
+}
+
+
+/********* Circle Section *************/
+
+section .circle
+{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: #fb8404;
+clip-path: circle(60% at right -20%);
+
+}
+
+/********* Header section ************/
+
+header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo
+
+{
+    max-height: 97px;
+    max-width: 120px;
+}
+
+header .navigation
+{
+    display: flex;
+   
+    
+    
+}
+
+header .navigation li
+{
+    list-style: none;
+    
+  
+    
+}
+
+header .navigation li a
+{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    font-weight: 500;
+    margin-left: 40px;
+    font-size: 1.2rem;
+}
+
+/******** Content Section **********/
+
+.content
+{
+    color: #134683;
+    
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.content .textBox
+{
+    position: relative;
+    max-width: 50%;
+}
+.content h2
+{
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.content p
+{
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.content a{
+    background-color: #fb8404;
+    text-decoration: none;
+    color: white;
+    border-radius: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    
+}
+
+
+/******** SCI section ***********/
+
+.sci
+{
+
+    position: absolute;
+    bottom: 40px;
+    left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.sci li
+{
+list-style: none;
+
+}
+
+.sci li a{
+   margin-right: 15px;
+   display: inline-block;
+   width: 50px;
+   height: 50px;
+   background: white  ;
+   display: flex;
+   justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+   
+}
+
+.sci li a:hover
+{
+    background: #fb8404;
+    transform: translateY(-10px);
+}
+
+.sci li a img
+{
+   transform: scale(0.5); 
+}
+
+/******* Swiper Section *********/
+
+    .swiper-wrapper
+    {
+        display: flex;
+    }
+  
+
+   .swiper-wrapper .swiper-slide 
+    {
+        display: flex;
+        justify-content: center;
+        min-width: 240px;
+     
+    }
+
+    .swiper-slide img 
+    {
+     
+      width: 50%;
+      
+      transform: scale(0.8);
+     
+    }
+   
+    .burger
+    {
+        display: none;
+    }
+
+
+
+    /************ Media *****************/
+
+@media (max-width:1000px)
+{
+    header .navigation
+    {
+        display: none;
+    }
+
+    .content
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        top: 80px;
+        position: relative;
+        
+        
+        
+    }
+
+    .content .textBox
+    {
+        position: relative;
+       max-width: 100%;
+        
+       
+       
+    }
+
+    .content .imgBox
+    {
+       align-self: center;
+    }
+.swiper-wrapper .swiper-slide
+{
+    max-height: 600px;
+}
+    .swiper-slide img
+    {
+        width: 40%;
+        
+    }
+
+    .sci
+    {
+        position: absolute;
+        bottom: 10px;
+        left: 60px
+    }
+
+    .burger
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+       
+        width: 40px;
+        height: 34px;
+        right: 60px;
+        top: 60px;
+        cursor: pointer;
+    }
+
+    .burger .bar
+    {
+        display: block;
+        height: 7px;
+        width: 100%;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    header .navigation.active
+    {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        
+        top: 200px;
+        margin: 0;
+        padding: 0;
+        justify-content:center;
+        align-items: center;
+
+        
+    }
+
+    header .navigation.active li{
+        padding-top: 30px;
+        display: flex;
+        
+    }
+    header .navigation.active li a{
+        font-size: 2rem;
+        
+        margin: 0;
+    }
+
+    header .navigation.active li a:hover{
+        color: #134683;
+    }
+
+    header.active{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    section.active
+    {
+        display: flex;
+        background-color: #fb8404;
+    }
+   
+    section.active .content
+    {
+        display: none;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+ 
