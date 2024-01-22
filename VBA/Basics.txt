@@ -63,8 +63,8 @@ Function Copy_Data()
     Dim placement_number As Integer
     Dim partner_number As Integer
     Dim partnerNames() As Variant ' Array to store partner names
-    Dim programData() As Variant  ' Array to store program data
-    Dim programSizes() As Variant ' Array to store the number of sizes for each program
+    Dim programData() As Variant  ' Aray to store program datA
+    Dim programSizes() As Variant ' Array to store number of sizes for each program
 
     placement_number = InputBox("How many placements will be needed?")
     placement_number = placement_number + 20
@@ -79,6 +79,9 @@ Function Copy_Data()
         ReDim programSizes(1 To partner_number, 1 To 3) ' Resize the programSizes array
         
         Dim i As Integer
+        Dim currentRow As Integer ' Track the current row for placing partner names
+        currentRow = 21 ' Initialize with the first row
+        
         For i = 1 To partner_number
             partnerNames(i) = InputBox("Enter Partner Name for Partner " & i & ":")
             
@@ -93,6 +96,16 @@ Function Copy_Data()
                 numSizes = InputBox("Enter the number of banner sizes for Program " & programData(i, 1) & ":")
                 
                 programSizes(i, j) = numSizes ' Store the number of sizes for this program
+                
+                ' Calculate the ending row for partner name based on the number of programs and sizes
+                Dim partnerNameEndRow As Integer
+                partnerNameEndRow = currentRow + (numPrograms * numSizes) - 1
+                
+                ' Set partner name in specific cells in column C
+                Range("C" & currentRow & ":C" & partnerNameEndRow).Value = partnerNames(i)
+                
+                ' Update the current row for the next partner
+                currentRow = partnerNameEndRow + 1
             Next j
         Next i
 
@@ -103,9 +116,11 @@ Function Copy_Data()
         MsgBox "No partners were specified. Exiting."
     End If
     
-    Range("20:20").Copy Range("21:" & placement_number)
+    
     
 End Function
+
+
 
 
 
